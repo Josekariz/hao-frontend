@@ -1,7 +1,7 @@
-import Dashboard from "./Dashboard";
-import Landlord from "./Landlord";
-import Login from "./Login";
-import Tenant from "./Tenant";
+import Dashboard from "../Pages/Dashboard";
+import Landlord from "../Pages/Landlord";
+import Login from "../Pages/Login";
+import Tenant from "../Pages/Tenant";
 
 function Controler() {
   return ( <>
@@ -9,7 +9,6 @@ function Controler() {
   <Dashboard/>
   <Login/>
   <Tenant/>
-
   
   </> );
 }

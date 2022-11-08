@@ -3,7 +3,7 @@ import { Form, Button,} from "react-bootstrap";
 // import GoogleLogin from "react-google-login";
 import { useNavigate } from "react-router-dom";
 
-import "../../assets/css/main.scss";
+// import "../Assets/css/login.scss";
 
 function LoginForm() {
   const navigate = useNavigate();

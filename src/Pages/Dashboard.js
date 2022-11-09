@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar/Navbar";
-
+import OverviewCard from "../components/OverviewCard";
 function Dashboard() {
   return (
     <div className="container-fluid mt-4">
@@ -12,7 +12,7 @@ function Dashboard() {
           <div className="Greeting-text">
             <p>Hello Chris</p>          
           </div>
-
+          <OverviewCard/>
         </div>
       </div>
     </div>

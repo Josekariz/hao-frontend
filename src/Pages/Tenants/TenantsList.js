@@ -1,12 +1,12 @@
 import React from "react";
-import "../Properties/Properties.css";
+import "../Tenants/Tenants.css";
 
-function PropertiesList() {
+function TenantsList() {
   const tableData= <div className="PropertyRow row gx-0 mx-3 my-3 px-4 py-1">
-  <div className="property_attr col">Silverton Heights</div>
-  <div className="property_attr col">Apartment</div>
-  <div className="property_attr col">Ksh. 55,000</div>
   <div className="property_attr col">Chris Mbogo</div>
+  <div className="property_attr col">chris123@gmail.com</div>
+  <div className="property_attr col">0712345678</div>
+  <div className="property_attr col">Ksh. 55,000</div>
   <div className="col">
     <button className="deleteBtn">Delete</button>
   </div>
@@ -18,10 +18,10 @@ function PropertiesList() {
         style={{ backgroundColor: "#026995", borderRadius: "5px" }}
         className="row gx-0 mx-3 px-4 py-1"
       >
-        <div className="table-headers col">Property Name</div>
-        <div className="table-headers col">Property Type</div>
+        <div className="table-headers col">Tenant Name</div>
+        <div className="table-headers col">Tenant Email</div>
+        <div className="table-headers col">Number</div>
         <div className="table-headers col">Rent</div>
-        <div className="table-headers col">Tenant</div>
         <div className="table-headers col"></div>
       </div>
       {tableData}
@@ -29,4 +29,4 @@ function PropertiesList() {
   );
 }
 
-export default PropertiesList;
+export default TenantsList;

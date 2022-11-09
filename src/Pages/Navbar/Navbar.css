@@ -1,0 +1,18 @@
+.navbar_elements a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color:#026995;
+}
+
+.active, .navbar_elements :hover{
+    font-weight:400;
+    color:#32b3ea
+    
+}
+.active{
+    color: #fff !important;
+    background:#026995 !important;
+    border-radius: 3px;
+    padding-top: 6px;
+    align-items: center;
+  }

@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Login from "./Pages/Login";
+import Login from "./Pages/Login/Login";
 import Dashboard from "./Pages/Dashboard";
-import Properties from "./Pages/Properties";
+import Properties from "./Pages/Properties/Properties";
 import Tenants from "./Pages/Tenants";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";

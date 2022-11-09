@@ -12,7 +12,7 @@ function TenantsList({ search, tenant }) {
           <div className="property_attr col">{tenant.name}</div>
           <div className="property_attr col">{tenant.email}</div>
           <div className="property_attr col">{tenant.phone_number}</div>
-          <div className="property_attr col">tenant.price</div>
+          <div className="property_attr col">{`Sh.${tenant.rent}`}</div>
           <div className="col">
             <button className="deleteBtn">Delete</button>
           </div>
@@ -29,7 +29,7 @@ function TenantsList({ search, tenant }) {
         <div className="table-headers col">Tenant Email</div>
         <div className="table-headers col">Number</div>
         <div className="table-headers col">Rent</div>
-        <div className="table-headers col"></div>
+        <div className="table-headers col">Delete</div>
       </div>
       {tableData}
     </div>

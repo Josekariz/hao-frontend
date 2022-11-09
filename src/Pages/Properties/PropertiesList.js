@@ -32,8 +32,8 @@ function PropertiesList({ search, property }) {
         <div className="table-headers col">Property name</div>
         <div className="table-headers col">Location</div>
         <div className="table-headers col">Property Type</div>
-        <div className="table-headers col">Rent</div>
-        <div className="table-headers col"></div>
+        <div className="table-headers col">User</div>
+        <div className="table-headers col">Delete</div>
       </div>
       {tableData}
     </div>

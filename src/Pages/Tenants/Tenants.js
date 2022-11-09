@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import "../Properties/Properties.css";
 import TenantsList from "./TenantsList";
 import TopNavBar from "../../components/TopNavBar";
 
 function Tenants() {
+  const [search, setSearch] = useState("");
+  const [tenant, setTenant] = useState([]);
+  const baseUrl = "http://localhost:9292/";
+  useEffect(() => {
+    fetch(`${baseUrl}tenants`)
+      .then((res) => res.json())
+      .then((data) => {
+        setTenant(data);
+      });
+  }, []);
   return (
     <div className="container-fluid vh-100 mt-4">
       <div className="row">
@@ -18,12 +28,12 @@ function Tenants() {
           style={{ border: "2px red solid" }}
           className="dashboard-main mh-100 col-10"
         >
-          <TopNavBar />
+          <TopNavBar setSearch={setSearch} />
           <div className="Greeting-text row">
             <p>My Tenants</p>
           </div>
 
-          <TenantsList />
+          {tenant && <TenantsList search={search} tenant={tenant} />}
         </div>
       </div>
     </div>

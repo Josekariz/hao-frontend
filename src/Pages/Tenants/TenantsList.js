@@ -1,17 +1,24 @@
 import React from "react";
 import "../Tenants/Tenants.css";
 
-function TenantsList() {
-  const tableData= <div className="PropertyRow row gx-0 mx-3 my-3 px-4 py-1">
-  <div className="property_attr col">Chris Mbogo</div>
-  <div className="property_attr col">chris123@gmail.com</div>
-  <div className="property_attr col">0712345678</div>
-  <div className="property_attr col">Ksh. 55,000</div>
-  <div className="col">
-    <button className="deleteBtn">Delete</button>
-  </div>
-</div>
-
+function TenantsList({ search, tenant }) {
+  const tableData = tenant
+    .filter((item) => {
+      return search === "" ? item : item.name.includes(search);
+    })
+    .map((tenant) => {
+      return (
+        <div className="PropertyRow row gx-0 mx-3 my-3 px-4 py-1">
+          <div className="property_attr col">{tenant.name}</div>
+          <div className="property_attr col">{tenant.email}</div>
+          <div className="property_attr col">{tenant.phone_number}</div>
+          <div className="property_attr col">tenant.price</div>
+          <div className="col">
+            <button className="deleteBtn">Delete</button>
+          </div>
+        </div>
+      );
+    });
   return (
     <div className="container">
       <div

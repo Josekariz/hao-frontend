@@ -1,5 +1,6 @@
 .innerCard{
-  border: 1px;
   border-radius: 2px;
-  border-color: blue;
+  background-color: #e6f8ff;
+ max-width: 70%;
+ padding: 25px;
 }

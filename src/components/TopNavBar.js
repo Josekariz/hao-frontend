@@ -16,7 +16,7 @@ function TopNavBar({setSearch}) {
           
         </div>
         <div className="col-4">
-          <button>Invite User</button>
+          <button>Add Property</button>
         </div>
       </div>
     </div>

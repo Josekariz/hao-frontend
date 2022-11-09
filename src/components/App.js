@@ -1,15 +1,17 @@
 import "../App.css";
 // import Controler from "./Controller";
 // import Login from "../Pages/Login";
-import BaseRouter from "../routes";
-import { BrowserRouter as Router } from "react-router-dom";
+// import BaseRouter from "../routes";
+// import { BrowserRouter as Router } from "react-router-dom";
+import Properties from "../Pages/Properties";
 
 function App() {
   return (
     <>
-      <Router>
+    <Properties/>
+      {/* <Router>
         <BaseRouter />
-      </Router>
+      </Router> */}
     </>
     //   <div className="App">
     //   <div className="text">H</div>

@@ -1,0 +1,47 @@
+.property {
+  width: 80%;
+  height: 85vh;
+  margin: 0;
+  border: 2px red solid;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.property-name {
+
+
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 27.65px;
+  line-height: 38px;
+  text-transform: capitalize;
+
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.table-box {
+  margin: 5px auto;
+}
+.table-row {
+  display: table;
+  width: 80%;
+  margin: 10px auto;
+  background: transparent;
+  padding: 12px;
+  color: #555;
+  font-size: 13px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 50, 0.3);
+}
+.table-cell {
+  display: table-cell;
+  width: 20%;
+  text-align: center;
+  border-right: 1px solid #d6d4d4;
+  vertical-align: middle;
+}
+.table-head {
+  background: pink;
+  box-shadow: none;
+}

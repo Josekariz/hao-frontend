@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import "../Properties/Properties.css";
 import PropertiesList from "./PropertiesList";
 import TopNavBar from "../../components/TopNavBar";
 
 function Properties() {
+  const [search, setSearch] = useState("");
+  const [property, setProperty] = useState([]);
+  const baseUrl = "http://localhost:9292/";
+  useEffect(() => {
+    fetch(`${baseUrl}properties`)
+      .then((res) => res.json())
+      .then((data) => {
+        setProperty(data);
+      });
+  }, []);
+
   return (
     <div className="container-fluid vh-100 mt-4">
       <div className="row">
@@ -18,12 +29,12 @@ function Properties() {
           style={{ border: "2px red solid" }}
           className="dashboard-main mh-100 col-10"
         >
-          <TopNavBar />
+          <TopNavBar setSearch={setSearch} />
           <div className="Greeting-text row">
             <p>My Properties</p>
           </div>
 
-          <PropertiesList />
+          {property && <PropertiesList search={search} property={property} />}
         </div>
       </div>
     </div>

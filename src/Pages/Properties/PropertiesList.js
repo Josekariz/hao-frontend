@@ -1,17 +1,27 @@
 import React from "react";
 import "../Properties/Properties.css";
 
-function PropertiesList() {
-  const tableData= <div className="PropertyRow row gx-0 mx-3 my-3 px-4 py-1">
-  <div className="property_attr col">Silverton Heights</div>
-  <div className="property_attr col">Apartment</div>
-  <div className="property_attr col">Ksh. 55,000</div>
-  <div className="property_attr col">Chris Mbogo</div>
-  <div className="col">
-    <button className="deleteBtn">Delete</button>
-  </div>
-</div>
-
+function PropertiesList({ search, property }) {
+  const tableData = property
+    .filter((item) => {
+      return search === "" ? item : item.property_name.includes(search);
+    })
+    .map((property) => {
+      return (
+        <div
+          key={property.id}
+          className="PropertyRow row gx-0 mx-3 my-3 px-4 py-1"
+        >
+          <div className="property_attr col">{property.location}</div>
+          <div className="property_attr col">{property.property_type}</div>
+          <div className="property_attr col">{property.property_name}</div>
+          <div className="property_attr col">Chris Mbogo</div>
+          <div className="col">
+            <button className="deleteBtn">Delete</button>
+          </div>
+        </div>
+      );
+    });
   return (
     <div className="container">
       <div

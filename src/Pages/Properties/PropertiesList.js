@@ -4,7 +4,7 @@ import "../Properties/Properties.css";
 function PropertiesList({ search, property }) {
   const tableData = property
     .filter((item) => {
-      return search === "" ? item : item.property_name.includes(search);
+      return search === "" ? item : item.property_name.toLowerCase().includes(search.toLowerCase());
     })
     .map((property) => {
       return (

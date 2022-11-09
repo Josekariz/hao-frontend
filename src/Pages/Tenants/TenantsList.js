@@ -4,7 +4,7 @@ import "../Tenants/Tenants.css";
 function TenantsList({ search, tenant }) {
   const tableData = tenant
     .filter((item) => {
-      return search === "" ? item : item.name.includes(search);
+      return search === "" ? item : item.name.toLowerCase().includes(search.toLowerCase());
     })
     .map((tenant) => {
       return (

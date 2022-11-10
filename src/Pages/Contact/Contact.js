@@ -97,6 +97,7 @@ class App extends React.Component {
                 <h3>Contact us through:</h3>
                 <h3>Email : @hao.gmail.co.ke</h3>
                 <h3>Phone number : +25473552552</h3>
+                <h2>Nairobi</h2>
               </div>
             </div>
           </div>

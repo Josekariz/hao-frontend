@@ -1,16 +1,14 @@
 import React from "react";
-import {
-  Container,
-  Navbar,
-  Button,
-  Row,
-  Col,
-} from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+
+import { Container, Navbar, Button, Row, Col } from "react-bootstrap";
 
 import Avatar from "react-avatar";
-import {PlusCircle,BellFill} from "react-bootstrap-icons"
+import { PlusCircle, BellFill } from "react-bootstrap-icons";
 
 function TopNavBar() {
+  const navigate = useNavigate();
+
   return (
     <Navbar className="nav-bar" expand="lg" variant="light">
       <Container fluid>
@@ -25,7 +23,12 @@ function TopNavBar() {
           </Form> */}
 
           <div className="nav-bar-button">
-            <Button className="btn btn-md btn-primary col-xs-12">
+            <Button
+              onClick={() => {
+                navigate("/add_property");
+              }}
+              className="btn btn-md btn-primary col-xs-12"
+            >
               <PlusCircle size={20} /> Add Property
             </Button>
           </div>
@@ -34,7 +37,7 @@ function TopNavBar() {
         <a href="/">
           <Row>
             <Col className="avatar-col">
-              <BellFill size={20}/>
+              <BellFill size={20} />
             </Col>
             <Col className="d-flex">
               <Avatar
@@ -43,7 +46,7 @@ function TopNavBar() {
                 size={40}
                 textSizeRatio={2.5}
                 round="20px"
-               />
+              />
               <div className="avatar-names">
                 <p>Chris</p>
                 <p>Landlord</p>

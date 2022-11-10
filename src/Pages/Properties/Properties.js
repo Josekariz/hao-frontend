@@ -4,6 +4,7 @@ import "../Properties/Properties.css";
 import PropertiesList from "./PropertiesList";
 import TopNavBar from "../../components/TopNavBar";
 
+
 function Properties() {
   // fetch properties from database
   const [search, setSearch] = useState("");
@@ -22,15 +23,13 @@ function Properties() {
 
   return (
     <div className="container-fluid vh-100 mt-4">
-      <div className="row">
+      <div className="row mh-100">
         <div
-          style={{ border: "2px red solid" }}
           className="dashboard-nav mh-100 col-2"
         >
           <Navbar />
         </div>
-        <div
-          style={{ border: "2px red solid" }}
+        <div style={{backgroundColor:"#e9f9ff",maxHeight:"100%",overflowY:"scroll"}}
           className="dashboard-main mh-100 col-10"
         >
           <TopNavBar setSearch={setSearch} />

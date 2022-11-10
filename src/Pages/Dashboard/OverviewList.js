@@ -2,7 +2,7 @@ import React from "react";
 import "../Dashboard/Dashboard.css"
 
 function OverviewList() {
-  const tableData= <div className="PropertyRow row gx-0 mx-3 my-3 px-4 py-1">
+  const tableData= <div style={{backgroundColor:"#ffffff"}}className="PropertyRow row gx-0 mx-3 my-3 px-4 py-1">
   <div className="property_attr col">Silverton Heights</div>
   <div className="property_attr col">Apartment</div>
   <div className="property_attr col">Ksh. 55,000</div>
@@ -25,6 +25,13 @@ function OverviewList() {
         {/* <div className="table-headers col"></div> */}
       </div>
       {tableData}
+      {tableData}
+      {tableData}
+      {tableData}
+      {tableData}
+      {tableData}
+      {tableData}
+    
     </div>
   );
 }

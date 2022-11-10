@@ -9,27 +9,28 @@ function Tenants() {
   const [tenant, setTenant] = useState([]);
   const baseUrl = "http://localhost:9292/";
   useEffect(() => {
-    getTenants()
+    getTenants();
   }, []);
 
-  function getTenants(){
+  function getTenants() {
     fetch(`${baseUrl}tenants`)
-    .then((res) => res.json())
-    .then((data) => {
-      setTenant(data);
-    });
+      .then((res) => res.json())
+      .then((data) => {
+        setTenant(data);
+      });
   }
   return (
     <div className="container-fluid vh-100 mt-4">
       <div className="row">
-        <div
-          style={{ border: "2px red solid" }}
-          className="dashboard-nav mh-100 col-2"
-        >
+        <div className="dashboard-nav mh-100 col-2">
           <Navbar />
         </div>
         <div
-          style={{ border: "2px red solid" }}
+          style={{
+            backgroundColor:"#e9f9ff",
+            maxHeight: "100%",
+            overflowY: "scroll",
+          }}
           className="dashboard-main mh-100 col-10"
         >
           <TopNavBar setSearch={setSearch} />
@@ -37,7 +38,13 @@ function Tenants() {
             <p>My Tenants</p>
           </div>
 
-          {tenant && <TenantsList search={search} tenant={tenant} getTenants={getTenants}/>}
+          {tenant && (
+            <TenantsList
+              search={search}
+              tenant={tenant}
+              getTenants={getTenants}
+            />
+          )}
         </div>
       </div>
     </div>

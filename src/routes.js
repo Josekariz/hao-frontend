@@ -4,9 +4,9 @@ import Login from "./Pages/Login/Login";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Properties from "./Pages/Properties/Properties";
 import Tenants from "./Pages/Tenants/Tenants";
-import About from "./Pages/About";
-import Contact from "./Pages/Contact";
-
+import About from "./Pages/About/About";
+import Contact from "./Pages/Contact/Contact";
+// import AddPropertyForm from "./components/AddPropertyForm ";
 const BaseRouter = () => (
   <div>
 <Routes>
@@ -16,6 +16,7 @@ const BaseRouter = () => (
       <Route path="/contact_us" element={<Contact/>} />
       <Route path="/about_us" element={<About/>} />
       <Route path="/tenants" element={<Tenants />} />
+      {/* <Route path="/add_property" element={<AddPropertyForm/>} /> */}
 
       {/* <Route path="*" element={<PageNotFound />} /> */}
     </Routes>

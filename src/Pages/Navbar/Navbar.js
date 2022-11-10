@@ -6,7 +6,7 @@ import {NavLink} from 'react-router-dom'
 function Navbar() {
   
   return (
-    <div className="container mt-5">
+    <div className="sideBar container mt-5">
       <div className="navbar_elements row mt-3 px-3 ">
         <NavLink activeClassName="active" to='/dashboard'>
           <div className="menu-cols">

@@ -39,7 +39,6 @@ function About() {
                   </h2>
                 </div>
                 <div className="containerB2">
-                <p className="p2">we deliver based on what you wish</p>
                   <img src={myImage2} />
                   
                 </div>

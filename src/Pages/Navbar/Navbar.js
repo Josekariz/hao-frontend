@@ -1,12 +1,16 @@
 import React from "react";
 import "../Navbar/Navbar.css"
 import {NavLink} from 'react-router-dom'
+import Logo from "../../components/images/Logo.png"
 
 
 function Navbar() {
   
   return (
     <div className="sideBar container mt-5">
+      <div className="row">
+        <img style={{maxWidth :"70%"}}src={Logo}className="p-2" alt="Hao logo"/>
+      </div>
       <div className="navbar_elements row mt-3 px-3 ">
         <NavLink activeClassName="active" to='/dashboard'>
           <div className="menu-cols">

@@ -7,7 +7,7 @@ import Tenants from "./Pages/Tenants/Tenants";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import AddPropertyForm from "./components/AddPropertyForm ";
-// import AddPropertyForm from "./components/AddPropertyForm ";
+// import EditPropertyForm from "./components/AddPropertyForm ";
 const BaseRouter = () => (
   <div>
 <Routes>
@@ -18,6 +18,7 @@ const BaseRouter = () => (
       <Route path="/about_us" element={<About/>} />
       <Route path="/tenants" element={<Tenants />} />
       <Route path="/add_property" element={<AddPropertyForm/>} />
+      {/* <Route path="/add_property" element={<EditPropertyForm/>} /> */}
 
       {/* <Route path="*" element={<PageNotFound />} /> */}
     </Routes>

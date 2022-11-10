@@ -1,26 +1,30 @@
+
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import { Container, Navbar, Button, Row, Col } from "react-bootstrap";
+import { Container, Navbar,Form,FormControl, Button, Row, Col } from "react-bootstrap";
 
 import Avatar from "react-avatar";
 import { PlusCircle, BellFill } from "react-bootstrap-icons";
 
-function TopNavBar() {
+function TopNavBar({setSearch}) {
   const navigate = useNavigate();
 
   return (
     <Navbar className="nav-bar" expand="lg" variant="light">
       <Container fluid>
         <Row>
-          {/* <Form className="d-flex">
+          <Form className="d-flex">
             <FormControl
               type="search"
-              placeholder="Search for requests"
+              placeholder="Search"
               className="me-2"
               aria-label="Search"
+              onChange={(e) => {
+                setSearch(e.target.value);
+              }}
             />
-          </Form> */}
+          </Form>
 
           <div className="nav-bar-button">
             <Button

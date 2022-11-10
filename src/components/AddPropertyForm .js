@@ -1,30 +1,69 @@
-import React from "react";
-import { Form, Button,} from "react-bootstrap";
+import React, { useState } from "react";
+import { Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 function AddPropertyForm() {
+  const [property_name, setPropertyName] = useState("");
+  const [property_type, setPropertyType] = useState("");
+  const [property_size, setPropertySize] = useState("");
+
   const navigate = useNavigate();
 
   const onSubmit = (event) => {
     event.preventDefault();
     navigate("/dashboard");
   };
+  const baseUrl = "http://localhost:9292/";
+
+  // creating a function to handle submissions
+  function handleSubmit(e) {
+    e.preventDefault();
+    const propertyData = {
+      property_type: property_type,
+      property_name: property_name,
+      property_size: property_size,
+    };
+
+    // create a post request to the mock server
+    fetch(`${baseUrl}property`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(propertyData),
+    }).then((r) => r.json());
+  }
   return (
     <div>
       <p className="header-1">Add A Property</p>
-      
+
       <Form onSubmit={onSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Property Name</Form.Label>
-          <Form.Control type="text" placeholder="Lavington Heights" />
+          <Form.Control
+            property_name="property_name"
+            type="text"
+            placeholder="Lavington Heights"
+            onChange={(e) => setPropertyName(e.target.value)}
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Property Type</Form.Label>
-          <Form.Control type="text" placeholder="Apartment" />
+          <Form.Control
+            property_type="property_type"
+            type="text"
+            placeholder="Apartment"
+            onChange={(e) => setPropertyType(e.target.value)}
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Property Size</Form.Label>
-          <Form.Control type="integer" placeholder="In square feet" />
+          <Form.Control
+            property_size="property_size"
+            type="integer"
+            placeholder="In square feet"
+            onChange={(e) => setPropertySize(e.target.value)}
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Location</Form.Label>
@@ -49,7 +88,7 @@ function AddPropertyForm() {
         <Button variant="primary" type="submit" className="btn-block px-5">
           Add Property
         </Button>
-        </Form>
+      </Form>
     </div>
   );
 }

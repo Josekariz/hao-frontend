@@ -1,7 +1,6 @@
 import React from "react";
-import { Form, Button,} from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-
 
 function EditPropertyForm() {
   const navigate = useNavigate();
@@ -13,7 +12,7 @@ function EditPropertyForm() {
   return (
     <div>
       <p className="header-1">Add A Property</p>
-      
+
       <Form onSubmit={onSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Property Name</Form.Label>
@@ -51,7 +50,7 @@ function EditPropertyForm() {
         <Button variant="primary" type="submit" className="btn-block px-5">
           Add Property
         </Button>
-        </Form>
+      </Form>
     </div>
   );
 }

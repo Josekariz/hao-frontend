@@ -6,11 +6,12 @@
   right: 0;
   padding-left: 100px;
   margin-right: 45%;
-  margin-top: 2%;
+  margin-top: 7%;
+  border-radius: 10%;
 }
 .contact-form{
   padding-left: 10px;
 }
-/* #root{
-  
-} */
+#submit-button{
+  margin: 2%;
+}

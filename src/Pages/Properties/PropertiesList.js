@@ -1,10 +1,14 @@
 import React from "react";
 import "../Properties/Properties.css";
 
-function PropertiesList({ search, property }) {
+function PropertiesList({ search, property, getProperties }) {
+  // const baseUrl = "http://localhost:9292/";
+
   const tableData = property
     .filter((item) => {
-      return search === "" ? item : item.property_name.toLowerCase().includes(search.toLowerCase());
+      return search === ""
+        ? item
+        : item.property_name.toLowerCase().includes(search.toLowerCase());
     })
     .map((property) => {
       return (
@@ -18,11 +22,28 @@ function PropertiesList({ search, property }) {
           <div className="property_attr col">property.nu</div>
 
           <div className="col">
-            <button className="deleteBtn">Delete</button>
+            <button
+              onClick={() => {
+                handleDelClick(property.id);
+              }}
+              className="deleteBtn"
+            >
+              Delete
+            </button>
           </div>
         </div>
       );
     });
+
+  // delete functionality
+  function handleDelClick(id) {
+    fetch(`http://localhost:9292/property/${id}`, {
+      method: "DELETE",
+    }).then((result) => {
+      result.json().then(getProperties());
+    });
+    alert`Deleted`;
+  }
   return (
     <div className="container">
       <div

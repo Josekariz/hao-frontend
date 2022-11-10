@@ -1,10 +1,12 @@
 import React from "react";
 import "../Tenants/Tenants.css";
 
-function TenantsList({ search, tenant }) {
+function TenantsList({ search, tenant, getTenants }) {
   const tableData = tenant
     .filter((item) => {
-      return search === "" ? item : item.name.toLowerCase().includes(search.toLowerCase());
+      return search === ""
+        ? item
+        : item.name.toLowerCase().includes(search.toLowerCase());
     })
     .map((tenant) => {
       return (
@@ -14,11 +16,29 @@ function TenantsList({ search, tenant }) {
           <div className="property_attr col">{tenant.phone_number}</div>
           <div className="property_attr col">{`Sh.${tenant.rent}`}</div>
           <div className="col">
-            <button className="deleteBtn">Delete</button>
+            <button
+              onClick={() => {
+                handleDelClick(tenant.id, tenant.name);
+              }}
+              className="deleteBtn"
+            >
+              Delete
+            </button>
           </div>
         </div>
       );
     });
+
+  ///delete tenant functionality
+  function handleDelClick(id, name) {
+    fetch(`http://localhost:9292/tenant/${id}`, {
+      method: "DELETE",
+    }).then((result) => {
+      result.json().then(getTenants());
+    });
+    (alert`Deleted`)
+  }
+
   return (
     <div className="container">
       <div

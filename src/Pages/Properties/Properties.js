@@ -5,16 +5,20 @@ import PropertiesList from "./PropertiesList";
 import TopNavBar from "../../components/TopNavBar";
 
 function Properties() {
+  // fetch properties from database
   const [search, setSearch] = useState("");
   const [property, setProperty] = useState([]);
   const baseUrl = "http://localhost:9292/";
   useEffect(() => {
+    getProperties();
+  }, []);
+  function getProperties() {
     fetch(`${baseUrl}properties`)
       .then((res) => res.json())
       .then((data) => {
         setProperty(data);
       });
-  }, []);
+  }
 
   return (
     <div className="container-fluid vh-100 mt-4">
@@ -34,7 +38,13 @@ function Properties() {
             <p>My Properties</p>
           </div>
 
-          {property && <PropertiesList search={search} property={property} />}
+          {property && (
+            <PropertiesList
+              search={search}
+              property={property}
+              getProperties={getProperties}
+            />
+          )}
         </div>
       </div>
     </div>

@@ -9,12 +9,16 @@ function Tenants() {
   const [tenant, setTenant] = useState([]);
   const baseUrl = "http://localhost:9292/";
   useEffect(() => {
-    fetch(`${baseUrl}tenants`)
-      .then((res) => res.json())
-      .then((data) => {
-        setTenant(data);
-      });
+    getTenants()
   }, []);
+
+  function getTenants(){
+    fetch(`${baseUrl}tenants`)
+    .then((res) => res.json())
+    .then((data) => {
+      setTenant(data);
+    });
+  }
   return (
     <div className="container-fluid vh-100 mt-4">
       <div className="row">
@@ -33,7 +37,7 @@ function Tenants() {
             <p>My Tenants</p>
           </div>
 
-          {tenant && <TenantsList search={search} tenant={tenant} />}
+          {tenant && <TenantsList search={search} tenant={tenant} getTenants={getTenants}/>}
         </div>
       </div>
     </div>

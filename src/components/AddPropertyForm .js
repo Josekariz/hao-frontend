@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Pages/Navbar/Navbar";
+import TopNavBar from "./TopNavBar";
 
 function AddPropertyForm() {
   const [property_name, setPropertyName] = useState("");
@@ -63,13 +65,24 @@ function AddPropertyForm() {
     alert("sent")(navigate("/dashboard"));
   }
   return (
-    <div>
+    <div className="container-fluid">
+      <div className="row">
+        <div className="left col-2">
+          <Navbar/>
+        </div>
+        <div style={{backgroundColor:"#e9f9ff",maxHeight:"100%",overflowY:"scroll"}} className="right col-10">
+      <div className="row mt-5">
+        <TopNavBar/>
+        </div> 
+      <div style={{marginLeft:"50px"}} className="row mt-5 ml-3">
       <p className="header-1">Add A Property</p>
-
+        </div>
+        <div style={{marginLeft:"50px"}}className="row mt-5 ml-5">
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Property Name</Form.Label>
           <Form.Control
+          style={{maxWidth:"40%"}}
             property_name="property_name"
             type="text"
             placeholder="Lavington Heights"
@@ -79,6 +92,7 @@ function AddPropertyForm() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Property Type</Form.Label>
           <Form.Control
+            style={{maxWidth:"40%"}}
             property_type="property_type"
             type="text"
             placeholder="Apartment"
@@ -88,6 +102,7 @@ function AddPropertyForm() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Property Size</Form.Label>
           <Form.Control
+            style={{maxWidth:"40%"}}
             property_size="property_size"
             type="integer"
             placeholder=" ie 3 Bedrooms"
@@ -97,6 +112,7 @@ function AddPropertyForm() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Location</Form.Label>
           <Form.Control
+          style={{maxWidth:"40%"}}
             type="text"
             location="location"
             placeholder="Neighborhood e.g Kilimani"
@@ -108,6 +124,7 @@ function AddPropertyForm() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Tenant Name</Form.Label>
           <Form.Control
+          style={{maxWidth:"40%"}}
             tenant_name="tenant_name"
             type="text"
             placeholder="Sam Smith"
@@ -117,6 +134,7 @@ function AddPropertyForm() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Tenant Email</Form.Label>
           <Form.Control
+          style={{maxWidth:"40%"}}
             email="email"
             type="email"
             placeholder="johndoe@yahoo.com"
@@ -126,6 +144,7 @@ function AddPropertyForm() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Tenant Number</Form.Label>
           <Form.Control
+          style={{maxWidth:"40%"}}
             phone_number="phone_number"
             type="integer"
             placeholder="0712345678"
@@ -135,6 +154,7 @@ function AddPropertyForm() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Tenant Rent</Form.Label>
           <Form.Control
+          style={{maxWidth:"40%"}}
             rent="rent"
             type="integer"
             placeholder="sh."
@@ -150,6 +170,9 @@ function AddPropertyForm() {
           Add Property
         </Button>
       </Form>
+      </div>
+      </div>
+      </div>
     </div>
   );
 }

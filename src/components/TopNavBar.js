@@ -1,7 +1,7 @@
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+// import {NavLink} from 'react-router-dom'
 import { Container, Navbar,Form,FormControl, Button, Row, Col } from "react-bootstrap";
 
 import Avatar from "react-avatar";
@@ -25,7 +25,7 @@ function TopNavBar({setSearch}) {
               }}
             />
           </Form>
-
+          {/* <NavLink to='/add_property'> */}
           <div className="nav-bar-button">
             <Button
               onClick={() => {
@@ -36,6 +36,7 @@ function TopNavBar({setSearch}) {
               <PlusCircle size={20} /> Add Property
             </Button>
           </div>
+          {/* </NavLink> */}
         </Row>
 
         <a href="/">

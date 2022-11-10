@@ -5,9 +5,6 @@ import "../Dashboard/Dashboard.css";
 import TopNavBar from "../../components/TopNavBar";
 
 function Dashboard() {
-
-  
-
   const [search, setSearch] = useState("");
   return (
     <div className="container-fluid">

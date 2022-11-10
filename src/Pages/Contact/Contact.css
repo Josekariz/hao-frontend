@@ -1,17 +1,23 @@
 /*  */
 .App{
-  width: 85%;
-  position: absolute ;
-  top: 0;
-  right: 0;
-  padding-left: 100px;
-  margin-right: 45%;
-  margin-top: 7%;
-  border-radius: 10%;
+  float: right;
+  clear: both;
+  position: relative ;
+   bottom: 440px; 
+   right: 20px;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px gray;
+  
+ 
+  /* padding-left: 100px; */
+  /* margin-right: 45%;
+  margin-top: 2%; */
 }
 .contact-form{
-  padding-left: 10px;
+  padding: 10px;
+
 }
-#submit-button{
-  margin: 2%;
-}
+/* #root{
+  
+} */

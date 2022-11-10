@@ -6,7 +6,7 @@
 
 80% of city residents are tenants. What this necesarrily means is that majority of the housing
 in the city is owned by just a few groups and individuals. It isn’t uncommon to find one
-landlord wning several hundred apartment/property units.
+landlord owning several hundred apartment/property units.
 
 ## Problem Statement
 
@@ -18,8 +18,8 @@ notebook, which is archaic to say the least. There is a wealth of data that can 
 landlord if the proper data management is done.
 
 ## The Product
-
-`Hao` is a simple web app that solves this problem by allowing landlords to store and
+To help curb this defficiency in management systems that are suitable for landlords' and landladys' seeking to find a management system tailored for them we designed HAO to help them.
+`Hao` is a simple web app that solves this problem by allowing landlords'  and landladys' to store and
 manipulate their property data and gather data intelligence to make strategic decisions.
 
 ## Minimum Viable Product

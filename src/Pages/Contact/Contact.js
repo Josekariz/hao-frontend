@@ -15,7 +15,7 @@ class App extends React.Component {
     e.preventDefault();
     axios({
       method: "POST",
-      url: "http:localhost:9292",
+      url: "",
       data: this.state,
     }).then((response) => {
       if (response.data.status === "success") {
@@ -37,12 +37,11 @@ class App extends React.Component {
             <Navbar />
           </div>
           </div>
-          <div className="App col-6" >
+          <div className="App col-10" >
             <div
               style={{
                 backgroundColor: "#eaf9ff",
-                maxHeight: "100%",
-                overflowY: "scroll",
+                width:"100%",
               }}
               className="dashboard-main mh-100 col-10"
             >
@@ -88,14 +87,14 @@ class App extends React.Component {
                 </div>
                 <div className="submit-button">
                   {" "}
-                  <button type="submit" className="btn btn-primary" id="submit-button">
+                  <button type="submit" className="btn btn-primary">
                     Submit
                   </button>
                 </div>
               </form>
               <div className="Contacts">
-                <h3>Contact us through:</h3>
-                <h3>Email : oscarokumu47@gmail.com</h3>
+                <p>Contact us through:</p>
+                <p>Email : oscarokumu47@gmail.com</p>
               </div>
             </div>
           </div>

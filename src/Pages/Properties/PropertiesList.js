@@ -19,7 +19,7 @@ function PropertiesList({ search, property, getProperties }) {
           <div className="property_attr col">{property.property_name}</div>
           <div className="property_attr col">{property.location}</div>
           <div className="property_attr col">{property.property_type}</div>
-          <div className="property_attr col">property.nu</div>
+          <div className="property_attr col">{property.property_size}</div>
 
           <div className="col">
             <button
@@ -53,7 +53,7 @@ function PropertiesList({ search, property, getProperties }) {
         <div className="table-headers col">Property name</div>
         <div className="table-headers col">Location</div>
         <div className="table-headers col">Property Type</div>
-        <div className="table-headers col">User</div>
+        <div className="table-headers col">Size in sq feet</div>
         <div className="table-headers col">Delete</div>
       </div>
       {tableData}

@@ -37,11 +37,12 @@ class App extends React.Component {
             <Navbar />
           </div>
           </div>
-          <div className="App col-10" >
+          <div className="App col-6" >
             <div
               style={{
                 backgroundColor: "#eaf9ff",
-                width:"100%",
+                maxHeight: "100%",
+                overflowY: "scroll",
               }}
               className="dashboard-main mh-100 col-10"
             >
@@ -87,14 +88,14 @@ class App extends React.Component {
                 </div>
                 <div className="submit-button">
                   {" "}
-                  <button type="submit" className="btn btn-primary">
+                  <button type="submit" className="btn btn-primary" id="submit-button">
                     Submit
                   </button>
                 </div>
               </form>
               <div className="Contacts">
-                <p>Contact us through:</p>
-                <p>Email : oscarokumu47@gmail.com</p>
+                <h3>Contact us through:</h3>
+                <h3>Email : oscarokumu47@gmail.com</h3>
               </div>
             </div>
           </div>

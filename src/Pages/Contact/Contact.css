@@ -1,5 +1,8 @@
 .Contacts {
-    margin-top: 10px;
+    margin-top: 400px;
+    margin-right: 250px;
+    border-radius: 1%;
+    border-style: none;
     height: 100px;
     padding:20px;
     color: darkblue;
@@ -14,8 +17,9 @@
   }
   @media screen and (max-width: 768px) {
     .Contacts {
-      margin-top: 10px;
+      margin-top: 400px;
       height: 100px;
+      border-radius: 1%;
       padding:20px;
       color: darkblue;
       background-color: #2faef0;
@@ -47,4 +51,13 @@
         font-size: small;
       }
   }
-  
+  .App{   
+   background-color: aqua;
+    background-image: url("../../Pages/Images/pexels-photomix-company-101808.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .submit-button{
+   margin-top: 50px;
+  }

@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './Contact.css'
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -30,6 +31,10 @@ class App extends React.Component {
   render() {
     return(
       <div className="App">
+        <div className="Contacts">
+            <h3>Contact us through:</h3>
+            <h3>Email : oscarokumu47@gmail.com</h3>
+        </div>
         <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
           <div className="form-group">
               <label htmlFor="name">Name</label>

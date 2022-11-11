@@ -53,9 +53,7 @@ Then run
  ### `npm start`
  This runs the app in development mode.The page will reload anytime you make changes to the code.
  
- Then followed by 
- ### `npm run server`
- This starts the server that hosts information to the site. It should be noted that you should run both the frontend and backend simultaneously as this repository only holds the frontend. The backend's repository is hao_back_end_api.
+ 
 ## backend set-up
 
  Fork and run the server from the backend through 

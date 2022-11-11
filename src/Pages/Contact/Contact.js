@@ -32,7 +32,8 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <div className="row">
+      <div className="fill-form"><p> Get in touch with us through;</p></div>
+        <div className="row"> 
           <div className="dashboard-nav mh-100 col-2">
             <Navbar />
           </div>

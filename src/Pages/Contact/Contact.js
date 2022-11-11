@@ -32,8 +32,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-      <div className="fill-form"><p> Get in touch with us through;</p></div>
-        <div className="row"> 
+        <div className="row">
           <div className="dashboard-nav mh-100 col-2">
             <Navbar />
           </div>
@@ -43,7 +42,8 @@ class App extends React.Component {
               style={{
                 backgroundColor: "#eaf9ff",
                 maxHeight: "100%",
-                overflowY: "scroll",
+                width: "100%",
+                
               }}
               className="dashboard-main mh-100 col-10"
             >
@@ -95,7 +95,7 @@ class App extends React.Component {
                 </div>
               </form>
               <div className="Contacts">
-                <h3>Contact us through:</h3>
+                <h4>Contact us through:</h4>
                 <h3>Email : @hao.gmail.co.ke</h3>
                 <h3>Phone number : +25473552552</h3>
                 <h2>Nairobi</h2>

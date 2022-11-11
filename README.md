@@ -56,8 +56,11 @@ Then run
  Then followed by 
  ### `npm run server`
  This starts the server that hosts information to the site. It should be noted that you should run both the frontend and backend simultaneously as this repository only holds the frontend. The backend's repository is hao_back_end_api.
+## backend set-up
 
- 
+ Fork and run the server from the backend through 
+`git@github.com:oumamoringa/hao_back_end_api.git`
+run `bunlde` then `rake server` to get the link ready.
 
  ## Contacts
  email : joseph.macharia@student.moringaschool.com
